@@ -1,0 +1,28 @@
+.footnote-container {
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    width: 20px;
+    display: inline-block;
+    height: 20px;
+    overflow: hidden;
+}
+.footnote-container i {
+    display: none;
+}
+.footnote-container:before {
+    background-color: #3668af;
+    height: 12px;
+    width: 12px;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #1e3a62;
+    content: attr(data-title);
+    position: absolute;
+    left: 0;
+    top: 0px;
+    text-align: center;
+    line-height: 12px;
+    font-size: 10px;
+    font-family: Arial;
+}
