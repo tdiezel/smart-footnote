@@ -1,7 +1,6 @@
 (function($) {
     //Configuring the 'Add footnote' button actions
     tinymce.PluginManager.add('btn_footnote', function( editor, url ) {
-        console.log(tinyMCE_object.plugin_dir);
         editor.addButton( 'btn_footnote', {
             text: '',
             icon: 'insertdatetime',
@@ -13,7 +12,7 @@
                         {
                             type   : 'textbox',
                             name   : 'num',
-                            label  : 'Num',
+                            label  : 'Reference',
                             layout: 'fit',
                             value  : ''
                         },
@@ -49,7 +48,7 @@
                         {
                             type   : 'textbox',
                             name   : 'num',
-                            label  : 'Num',
+                            label  : 'Reference',
                             layout: 'fit',
                             value  : e.dataset.title
                         },

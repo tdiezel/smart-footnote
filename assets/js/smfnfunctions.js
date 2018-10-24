@@ -19,7 +19,6 @@
         });
     }
     $('.js-article-aside-trigger').click(function(e){
-        console.log('click');
         if($(this).hasClass('aside-active')) {
             $(this).removeClass('aside-active').siblings('.article-aside').removeClass('aside-active');
         } else {
@@ -27,7 +26,6 @@
         }
     });
     $('.js-article-unabridge-trigger').click(function(){
-        console.info('clicked');
         if($(this).parents('.footnote').hasClass('article-aside--abridged')) {
             $(this).parents('.footnote').removeClass('article-aside--abridged');
             $(this).html('Show Less');
@@ -35,5 +33,5 @@
             $(this).parents('.footnote').addClass('article-aside--abridged');
             $(this).html('Show More');
         }
-    })
+    });
 })(jQuery);
