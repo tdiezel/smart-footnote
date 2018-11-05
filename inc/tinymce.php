@@ -38,18 +38,14 @@ if ( ! function_exists( 'mytheme_register_buttons' ) ) {
     }
 }
 
+// Add global variable for admin
+add_action ( 'after_wp_tiny_mce', 'smfn_tinymce_extra_vars' );
 
-add_action ( 'after_wp_tiny_mce', 'mytheme_tinymce_extra_vars' );
-
-if ( !function_exists( 'mytheme_tinymce_extra_vars' ) ) {
-    function mytheme_tinymce_extra_vars() { ?>
+if ( !function_exists( 'smfn_tinymce_extra_vars' ) ) {
+    function smfn_tinymce_extra_vars() { ?>
         <script type="text/javascript">
             var tinyMCE_object = <?php echo json_encode(
-                    array(
-                        'button_name' => esc_html__('My button name', 'mythemeslug'),
-                        'button_title' => esc_html__('The title of the pop up box', 'mythemeslug'),
-                        'plugin_dir' => plugin_dir_url(SMFN_FILE),
-                    )
+                    array('plugin_dir' => plugin_dir_url(SMFN_FILE))
                 );
                 ?>;
         </script><?php

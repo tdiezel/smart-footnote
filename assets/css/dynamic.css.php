@@ -1,3 +1,4 @@
+<?php header("Content-type: text/css; charset: UTF-8"); ?>
 .footnote-container {
     display: inline;
 }
@@ -131,7 +132,7 @@
     display: block;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: <?php echo $_GET['media']; ?>px) {
     .footnote-ref.aside-active:before {
         background-color: #999;
         border-color: #999;
@@ -152,7 +153,7 @@
     }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: <?php echo (intval($_GET['media']) + 1); ?>px) {
     .footnote {
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
         opacity: 1;
@@ -162,7 +163,17 @@
         width: 140px;
         left: 30px;
         line-height: 1;
-        display: inline;
+        display: inline-block;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=1);
+        opacity: .01;
+        -webkit-transition: opacity .2s ease-in;
+        -moz-transition: opacity .2s ease-in;
+        -o-transition: opacity .2s ease-in;
+        transition: opacity .2s ease-in;
+    }
+    .article-aside.show {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+        opacity: 1;
     }
     .article-aside--abridged {
         z-index: 10;
