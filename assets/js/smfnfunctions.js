@@ -1,8 +1,8 @@
 (function ($) {
     var config = {
-        "show_more" : window.SMFN_object.show_more,
-        "show_less" : window.SMFN_object.show_less,
-        "max_width" : window.SMFN_object.media_query
+        "show_more": window.SMFN_object.show_more,
+        "show_less": window.SMFN_object.show_less,
+        "max_width": window.SMFN_object.media_query
     };
 
     //cache DOM
@@ -48,6 +48,7 @@
             });
         }
     }
+
     function distributeFn() {
         //Clean alignment classes
         //$ft.removeClass("right");
