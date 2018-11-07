@@ -1,8 +1,8 @@
 # Smart footnote plugin
 
-This is a plugin made for Mcgill Law Journal project.
+This is a plugin made for **Mcgill Law Journal project**.
 
-This plugin add a footnote button to the tynimce on wordpress. Click the button to add a footnote at the cursor position.
+This plugin add a footnote button ![](assets/img/button.png) to the tynimce on wordpress. Click the button to add a footnote at the cursor position.
 
 The footnote will have two fields:
 
