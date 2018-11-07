@@ -1,6 +1,6 @@
 # Smart footnote plugin
 
-This is a plugin made for **Mcgill Law Journal project**.
+This is a plugin made for **Mcgill Law Journal** project*.
 
 This plugin add a footnote button ![](assets/img/button.png) to the tynimce on wordpress. Click the button to add a footnote at the cursor position.
 
@@ -29,6 +29,6 @@ Under the *max-width* the footnote will appear in the next line when clicked.
 
 ---
 
-##Translation
+## Translation
 
 To translate the *Show more* and *Show less* toggle, use the .po file inside the plugin languages folder.
